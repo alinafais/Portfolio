@@ -1,0 +1,637 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #eae3e6;
+    color: #333;
+}
+h1, h2, h3, .heading {
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: 700;
+    color: #6c4c8b; /* Adjust color if needed */
+}
+/* Header Section */
+.project-header {
+    background: var(--primary-color, #d41798bb);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(230, 111, 190, 0.494); /* Added shadow for header depth */
+}
+
+.project-header h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-transform: uppercase; /* Makes the title all caps */
+}
+
+/* Main Details Section */
+.project-details {
+    padding: 0rem 5%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the section */
+}
+
+/* .project-overview {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.project-overview img {
+    align-self: flex-start; 
+    width: 40%; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(204, 96, 173, 0.2);
+    margin-top: 0;
+} */
+
+.project-overview {
+    display: grid;
+    grid-template-columns: 2fr 2fr; /* Image takes 1/3, text takes 2/3 */
+    gap: 2rem; /* Reduces space between the image and text */
+    align-items: start; /* Aligns both image and text to the top */
+    margin-top: 2rem;
+}
+
+.project-overview img {
+    width: 100%; /* Ensures the image fills its container */
+    border-radius: 10px; /* Keeps rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Keeps shadow effect */
+    margin: 0; /* Removes any margin around the image */
+    align-self: start; 
+}
+
+.overview-content {
+    flex: 1; /* Allows the text to adjust dynamically */
+    text-align: justify; /* Justifies the text for readability */
+}
+
+.overview-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color, #e516a3); /* Adds color to the section title */
+}
+
+.overview-content p {
+    line-height: 1.8; /* Increases line spacing for readability */
+    margin-bottom: 3rem; /* Adds more space below paragraphs */
+}
+
+/* Key Features Section */
+.key-features-section {
+    margin-top: 1rem;
+}
+
+.key-features-section ul {
+    list-style-type: disc;
+    padding-left: -2rem;
+    /* margin-top: 1rem;  */
+    margin-left: 5; /* Removes additional margin */
+    text-align: left;
+}
+
+.key-features-section ul li {
+    line-height: 1.8; /* Better spacing between list items */
+    margin-left: -2rem;
+}
+
+.key-features-section h3 {
+    margin-left: 31rem;
+    font-size: 3rem; /* Adjust font size for the heading */
+    margin-top: 1.5rem; /* Adds spacing above the heading */
+    margin-bottom: 1rem; /* Adds spacing below the heading */
+    color: #e516a3; /* Matches the "Objective" color */
+    font-weight: bold;
+}
+/* Tags Section */
+.scrolling-tags {
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent line wrapping */
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .tags-wrapper {
+    display: inline-flex;
+    animation: scroll-horizontal 25s linear infinite; /* Animation for smooth scrolling */
+  }
+  
+  .tag {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 5px 15px;
+    border: 2px solid #504e75;
+    border-radius: 20px;
+    color: #504e75;
+    font-weight: bold;
+    white-space: nowrap;
+}
+/* Style for the Industry and Tools container */
+.info-container {
+    margin-top: 1rem;
+    padding: 10px;
+    font-family: 'Georgia', serif;
+    color: #131055;
+}
+
+/* Style for Industry and Tools text */
+.info-container p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #5b5b5b;
+    line-height: 1.8;
+    text-align: left;
+    font-family: 'lato', sans-serif;
+}
+
+.info-container strong {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #131055; /* Dark blue for labels */
+}
+
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(0); /* Start from the initial position */
+    }
+    100% {
+      transform: translateX(-50%); /* Move left by half of the container's width */
+    }
+}
+
+/* Project Gallery Section */
+.project-gallery {
+    margin-top: 1rem;
+}
+
+.project-gallery h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color, #e516a3);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.gallery-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Ensures responsive image layout */
+    justify-content: center; /* Centers the images */
+}
+
+.gallery-images img {
+    width: 110%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds hover effects */
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05); /* Zooms in on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* User Research */
+.additional-image-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.additional-image-section h2 {
+    font-size: 3rem;
+    color: var(--primary-color, #e516a3);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.additional-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.additional-image img {
+    width: 80%; /* Adjust the size of the image */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.additional-image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Research Section */
+.background-research-section {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: transparent; /* Light pinkish background for distinction */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.background-research-section h2 {
+    font-size: 3rem;
+    color: #e516a3;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.background-research-section .research-description {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.research-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Ensures responsive layout on smaller screens */
+}
+
+.image-container {
+    flex: 1;
+    max-width: 45%;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+.image-container p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* User Research */
+.design-alt {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.design-alt h2 {
+    font-size: 3rem;
+    color: var(--primary-color, #e516a3);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.design-alternate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.design-alternate img {
+    width: 80%; /* Adjust the size of the image */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-alternate img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Sketches */
+.image-section {
+    margin: 2rem 0; /* Adds margin above and below the section */
+    text-align: center; /* Centers the heading */
+}
+
+.image-section h2 {
+    font-size: 3rem;
+    color: #e516a3;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between; /* Adds space between images */
+    align-items: center; /* Vertically aligns images */
+    gap: 1rem; /* Adds a gap between the images */
+    margin: 1rem 0; /* Adds margin around the row */
+}
+
+.image-container {
+    flex: 1; /* Ensures all images take equal space */
+    max-width: 30%; /* Limits the width of each image */
+    text-align: center; /* Centers the image inside the container */
+}
+
+.image-container img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Maintains the image aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+}
+
+.image-container p {
+    margin-top: 0.5rem; /* Adds space between the image and caption */
+    font-size: 0.9rem; /* Adjusts the caption font size */
+    color: #555; /* Optional: Adjusts the caption color */
+}
+
+/* Storybaords & Scenarios */
+.storyboard-section {
+    margin: 2rem 0; /* Adds space above and below the section */
+    text-align: center; /* Centers heading and description */
+}
+
+.storyboard-section h2 {
+    font-size: 3rem;
+    color: #e516a3;
+}
+
+.section-description {
+    font-size: 1.5rem; /* Description font size */
+    color: #555; /* Subtle color for description */
+    margin-bottom: 2rem; /* Adds space below the description */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between; /* Adds space between images */
+    gap: 1.5rem; /* Adds space between columns */
+    margin-bottom: 2rem; /* Adds space between rows */
+}
+
+.image-container {
+    flex: 1; /* Ensures equal spacing */
+    max-width: 30%; /* Controls the maximum width of each image container */
+    text-align: center; /* Centers image and text */
+}
+
+.image-container img {
+    width: 100%; /* Ensures images fit their containers */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+}
+
+.image-container p {
+    margin-top: 0.5rem; /* Adds space between the image and the caption */
+    font-size: 0.9rem; /* Smaller font for captions */
+    color: #333; /* Caption color */
+}
+/* Low-fi */
+.single-image-section {
+    margin: 2rem 0; /* Adds space around the section */
+    text-align: center; /* Centers the heading and image */
+}
+
+.single-image-section h2 {
+    font-size: 3rem;
+    color: #e516a3;
+}
+
+.single-image-container {
+    max-width: 60%; /* Restricts image width to 80% of container */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.single-image-container img {
+    width: 80%; /* Makes image responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow effect */
+}
+
+/* Colors and Icons*/
+.three-image-section {
+    margin: 2rem 0;
+    text-align: center;
+    background: none; /* Adds gradient background */
+    padding: 2rem 1rem;
+    border-radius: 20px; /* Rounded corners for the section */
+}
+
+.three-image-section h2 {
+    font-size: 3rem;
+    color: #e516a3;
+}
+
+.three-image-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.image-with-text {
+    text-align: center;
+    max-width: 30%;
+    flex: 1;
+    background: #fffcfe; /* Adds white background to images */
+    padding: 1rem;
+    border-radius: 10px; /* Rounded corners for image blocks */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for image blocks */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-with-text:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.image-with-text img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+/* Usability Testing Section */
+.usability-testing-section {
+    margin: 3rem 0; /* Adds spacing from previous content */
+    background: transparent; /* Matches above sections for continuity */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.usability-testing-section h2 {
+    font-size: 3rem;
+    color: #e516a3;
+}
+
+.testing-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555; /* Neutral text color */
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.usability-bullets {
+    padding-left: 1.5rem; /* Indent bullets */
+    list-style-type: disc;
+    margin-top: 1rem;
+}
+
+.usability-bullets li {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #333; /* Slightly darker text for emphasis */
+}
+
+.usability-bullets strong {
+    color: #e516a3; /* Highlights important terms */
+    font-weight: bold;
+}
+
+/* FINAL */
+/* Final Section */
+.final-section {
+    margin: 2rem 0;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.final-section-heading {
+    font-size: 3rem;
+    color: #e516a3;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.final-section-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.final-section-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between rows */
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between images */
+    position: relative; /* Enables negative margins for zig-zag effect */
+}
+
+.second-row {
+    margin-top: -2rem; /* Moves the second row slightly upwards */
+}
+
+.image-row img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.image-small {
+    width: 25%; /* Smaller width for small images */
+    height: auto;
+}
+
+.image-large {
+    width: 30%; /* Larger width for large images */
+    height: auto;
+}
+
+.image-row:nth-child(odd) img:nth-child(1),
+.image-row:nth-child(even) img:nth-child(3) {
+    margin-top: -2rem; /* Offset specific images for zig-zag effect */
+}
+
+/* Footer Section */
+.project-footer {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    background: transparent; /* Adds background for separation */
+}
+
+.project-footer .back-btn {
+    font-size: 1rem;
+    color: white;
+    background: var(--primary-color, #e93cc0);
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds button shadow */
+}
+
+.project-footer .back-btn:hover {
+    background: #b271eb;
+    transform: scale(1.05); /* Enlarges button slightly on hover */
+}
+/* Footer Section */
+.footer {
+    color: #333; /* Dark text color */
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    /* box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); */
+    z-index: 1; /* Lower z-index to ensure it stays behind the button */
+    position: relative; /* Ensures it's part of the document flow */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .social-icons a {
+    color: #333; /* Icon color */
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #b271eb; /* Blue hover effect */
+  }
+  
+  /* Ensure alignment with icons */
+  .social-icons i {
+    display: inline-block;
+  }
+  
+
+
